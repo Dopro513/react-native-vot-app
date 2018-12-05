@@ -10,17 +10,19 @@ import {
   ScrollView
 } from "react-native";
 import { Constants } from "expo";
-import Divider from "../Divider";
+import Divider from "./Divider";
 
 class Campaign extends Component {
   render() {
-    const { title, buttonTitle, divide } = this.props;
+    const { title, buttonTitle, divide, description, button } = this.props;
     return (
       <View style={styles.campaignContainer}>
-        {title && <Text style={styles.headLabel}>Cadidate Name</Text>}
-        <Text style={styles.paragraph}>
-          Lorem Ipsum has been the industry's standard dummy text ever.
-        </Text>
+        {title && <Text style={styles.headLabel}>{title}</Text>}
+
+        {description &&
+          <Text style={styles.paragraph}>
+            {description}
+          </Text>}
         <View style={styles.currencyContainer}>
           <View style={[styles.item, { width: 110 }]}>
             <Text
@@ -79,31 +81,35 @@ class Campaign extends Component {
             <Text>Days left</Text>
           </View>
         </View>
-        <TouchableOpacity
-          onPress={this.props.onPress}
-          style={{
-            borderColor: "#ccc",
-            borderWidth: 1,
-            padding: 16,
-            shadowColor: "#000000",
-            shadowOffset: {
-              width: 0,
-              height: 1
-            },
-            shadowRadius: 1,
-            shadowOpacity: 0.4
-          }}
-        >
-          <Text style={{ textAlign: "center" }}>
-            {buttonTitle || "View Campaign"}
-          </Text>
-        </TouchableOpacity>
+        {button &&
+          <TouchableOpacity
+            onPress={this.props.onPress}
+            style={{
+              borderColor: "#ccc",
+              borderWidth: 1,
+              padding: 16,
+              shadowColor: "#000000",
+              shadowOffset: {
+                width: 0,
+                height: 1
+              },
+              shadowRadius: 1,
+              shadowOpacity: 0.4
+            }}
+          >
+            <Text style={{ textAlign: "center" }}>
+              {buttonTitle || "View Campaign"}
+            </Text>
+          </TouchableOpacity>}
         {divide && <Divider />}
       </View>
     );
   }
 }
 
+Campaign.defaultProps = {
+  button: true
+};
 const styles = StyleSheet.create({
   currencyContainer: {
     flexDirection: "row",

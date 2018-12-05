@@ -14,7 +14,8 @@ import {
   Platform
 } from "react-native";
 import { withNavigation } from "@expo/ex-navigation";
-import Campaign from "./Campaign";
+import Campaign from "../Campaign";
+import RightButton from "../RightButton";
 
 @withNavigation
 class Home extends Component {
@@ -29,16 +30,7 @@ class Home extends Component {
     navigationBar: {
       title: "Outvote",
       renderLeft: (route, props) => <View />,
-      renderRight: (route, props) =>
-        <TouchableOpacity
-          style={{
-            width: 50,
-            alignItems: "center",
-            marginTop: Platform.OS === "ios" ? 5 : 15
-          }}
-        >
-          <Ionicons name="ios-notifications-outline" size={32} />
-        </TouchableOpacity>
+      renderRight: (route, props) => <RightButton />
     }
   };
 
@@ -53,6 +45,8 @@ class Home extends Component {
           {Array.apply(null, { length: 10 }).map((item, index) =>
             <Campaign
               key={index}
+              title="Candidate Name"
+              description="simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard "
               onPress={this.onViewCampaign}
               divide={index < 9}
             />

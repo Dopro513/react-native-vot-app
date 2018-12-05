@@ -13,7 +13,7 @@ import {
 import { Constants, Video } from "expo";
 import { Ionicons } from "@expo/vector-icons";
 import Accordion from "react-native-collapsible/Accordion";
-import Campaign from "../home/Campaign";
+import Campaign from "../Campaign";
 
 const { width } = Dimensions.get("window");
 
@@ -92,6 +92,7 @@ class Detail extends Component {
           <View style={styles.videoContainer}><Text>Viedo Block</Text></View>
           <View style={{ marginTop: 15 }}>
             <Campaign
+              title="Some title here"
               buttonTitle="Join the Campaign"
               onPress={() => alert("press me")}
             />

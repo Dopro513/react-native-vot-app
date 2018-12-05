@@ -59,11 +59,11 @@ export default class TabScreen extends React.Component {
           renderIcon={isSelected =>
             this._renderIcon("ios-megaphone-outline", "ios-megaphone", false)}
         >
-          <View
-            style={{ justifyContent: "center", alignItems: "center", flex: 1 }}
-          >
-            <Text>megaphone</Text>
-          </View>
+          <StackNavigation
+            id="myCandidate"
+            navigatorUID="myCandidate"
+            initialRoute={Router.getRoute("myCandidate")}
+          />
         </TabItem>
         <TabItem
           id="dashboard"
