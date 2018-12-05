@@ -6,6 +6,7 @@ import CandidateScreen from "./screens/CandidateScreen";
 import TabNavigationScreen from "./screens/TabNavigationScreen";
 import SettingScreen from "./screens/SettingScreen";
 import CampaignScreen from "./screens/CampaignScreen";
+import Introduction from "./screens/Introduction";
 
 const Router = createRouter(() => ({
   home: () => Home,
@@ -14,7 +15,8 @@ const Router = createRouter(() => ({
   tabNavigation: () => TabNavigationScreen,
   candidateScreen: () => CandidateScreen,
   setting: () => SettingScreen,
-  campaign: () => CampaignScreen
+  campaign: () => CampaignScreen,
+  introduction: () => Introduction
 }));
 
 export default Router;

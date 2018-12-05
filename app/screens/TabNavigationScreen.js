@@ -17,8 +17,6 @@ import Router from "../Router";
 import { Ionicons } from "@expo/vector-icons";
 import Colors from "../constants/Colors";
 
-// Treat the TabScreen route like any other route -- you may want to set
-// it as the initial route for a top-level StackNavigation
 export default class TabScreen extends React.Component {
   static route = {
     navigationBar: {
@@ -73,11 +71,11 @@ export default class TabScreen extends React.Component {
           renderIcon={isSelected =>
             this._renderIcon("ios-aperture-outline", "ios-aperture", false)}
         >
-          <View
-            style={{ justifyContent: "center", alignItems: "center", flex: 1 }}
-          >
-            <Text>Dashboard</Text>
-          </View>
+          <StackNavigation
+            id="introduction"
+            navigatorUID="introduction"
+            initialRoute={Router.getRoute("introduction")}
+          />
         </TabItem>
         <TabItem
           id="cash"
@@ -85,11 +83,11 @@ export default class TabScreen extends React.Component {
           renderIcon={isSelected =>
             this._renderIcon("ios-cash-outline", "ios-cash", false)}
         >
-          <View
-            style={{ justifyContent: "center", alignItems: "center", flex: 1 }}
-          >
-            <Text>Cash</Text>
-          </View>
+          <StackNavigation
+            id="campaign"
+            navigatorUID="campaign"
+            initialRoute={Router.getRoute("campaign")}
+          />
         </TabItem>
 
         <TabItem
@@ -98,11 +96,11 @@ export default class TabScreen extends React.Component {
           renderIcon={isSelected =>
             this._renderIcon("ios-cog-outline", "ios-cog", false)}
         >
-          <View
-            style={{ justifyContent: "center", alignItems: "center", flex: 1 }}
-          >
-            <Text>Setting</Text>
-          </View>
+          <StackNavigation
+            id="setting"
+            navigatorUID="setting"
+            initialRoute={Router.getRoute("setting")}
+          />
         </TabItem>
       </TabNavigation>
     );
