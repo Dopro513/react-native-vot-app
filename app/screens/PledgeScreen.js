@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import Campaign from "../components/campaign";
+import Pledge from "../components/pledges";
 
 function mapStateToProps(state) {
   return {};
@@ -12,4 +12,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Campaign);
+export default connect(mapStateToProps, mapDispatchToProps)(Pledge);

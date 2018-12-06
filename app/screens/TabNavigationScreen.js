@@ -78,15 +78,15 @@ export default class TabScreen extends React.Component {
           />
         </TabItem>
         <TabItem
-          id="cash"
+          id="pledge"
           selectedStyle={styles.selectedTab}
           renderIcon={isSelected =>
             this._renderIcon("ios-cash-outline", "ios-cash", false)}
         >
           <StackNavigation
-            id="campaign"
-            navigatorUID="campaign"
-            initialRoute={Router.getRoute("campaign")}
+            id="pledge"
+            navigatorUID="pledge"
+            initialRoute={Router.getRoute("pledge")}
           />
         </TabItem>
 

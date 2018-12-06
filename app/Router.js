@@ -5,7 +5,7 @@ import Register from "./screens/accounts/Register";
 import CandidateScreen from "./screens/CandidateScreen";
 import TabNavigationScreen from "./screens/TabNavigationScreen";
 import SettingScreen from "./screens/SettingScreen";
-import CampaignScreen from "./screens/CampaignScreen";
+import PledgeScreen from "./screens/PledgeScreen";
 import Introduction from "./screens/Introduction";
 import MyCandidateScreen from "./screens/MyCandidateScreen";
 import CandidateCampaignScreen from "./screens/CandidateCampaignScreen";
@@ -17,7 +17,7 @@ const Router = createRouter(() => ({
   tabNavigation: () => TabNavigationScreen,
   candidateScreen: () => CandidateScreen,
   setting: () => SettingScreen,
-  campaign: () => CampaignScreen,
+  pledge: () => PledgeScreen,
   introduction: () => Introduction,
   myCandidate: () => MyCandidateScreen,
   candidateCampaign: () => CandidateCampaignScreen

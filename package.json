@@ -25,6 +25,7 @@
     "prop-types": "^15.5.10",
     "react": "16.0.0-alpha.12",
     "react-native": "github:expo/react-native#sdk-18.0.0",
+    "react-native-chooser": "^1.5.3",
     "react-native-collapsible": "^0.8.0",
     "react-native-elements": "^0.14.0",
     "react-redux": "^5.0.5",
