@@ -28,6 +28,7 @@
     "react-native-chooser": "^1.5.3",
     "react-native-collapsible": "^0.8.0",
     "react-native-elements": "^0.14.0",
+    "react-native-modal": "^2.4.0",
     "react-redux": "^5.0.5",
     "redux": "^3.7.1",
     "redux-thunk": "^2.2.0"
